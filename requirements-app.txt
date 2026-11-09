@@ -1,0 +1,2 @@
+# Demo UI (app/demo.py)
+gradio>=5.20,<6
