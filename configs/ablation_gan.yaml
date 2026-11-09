@@ -1,0 +1,9 @@
+# Does adding AC-GAN images to the training split help? Generate first:
+#   python -m src.gan.acgan train --config configs/acgan.yaml --run-dir outputs/gan/acgan
+#   python -m src.gan.acgan generate --run outputs/gan/acgan --per-class 50 --out outputs/synthetic/acgan
+base: configs/multiclass_dm_vs_hypertension.yaml
+seeds: [1, 2, 3]
+variants:
+  real_only: []
+  real_plus_gan_10: ["synthetic.dir=outputs/synthetic/acgan", "synthetic.per_class=10"]
+  real_plus_gan_40: ["synthetic.dir=outputs/synthetic/acgan", "synthetic.per_class=40"]
