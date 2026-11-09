@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.conda/
+
+# Notebooks / IDE / OS
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.spyproject/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets / local config
+.env
+.env.*
+
+# Training outputs (AC-GAN checkpoints and sample grids written to the CWD every epoch)
+generated_plot_*.png
+model_[0-9][0-9][0-9][0-9].h5
+discriminator_[0-9][0-9][0-9][0-9].h5
+predictions.xlsx
+generator_summary.png
+discriminator_summary.png
+
+# Experiment tracking / logs
+runs/
+logs/
+mlruns/
+wandb/
+outputs/
+
+# Raw source images (input to src.data.manifest build); keep them outside git or in LFS/DVC
+raw_data/
+Monika/
+
+# Clean split materialized by `python -m src.data.manifest split --materialize`
+data/clean/
+
+# Local caches (Keras pretrained weights when KERAS_HOME points here)
+.keras/
+.venv-*/
+.ruff_cache/
+.pytest_cache/
