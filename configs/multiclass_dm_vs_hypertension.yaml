@@ -1,0 +1,15 @@
+# Binary single-label task with the most usable images (multi-label images excluded).
+name: multiclass_dm_vs_hypertension
+seed: 42
+data:
+  manifest: data/manifest_split.csv
+  task: multiclass
+  classes: [DM, Hypertension]
+  img_size: 224
+model:
+  arch: efficientnet_b0
+  pretrained: true
+train:
+  epochs: 30
+  fine_tune_epochs: 10
+  batch_size: 8
