@@ -1,0 +1,193 @@
+{
+  "n_files": 3306,
+  "n_unique": 3292,
+  "augmented_fraction": 0.9843,
+  "counts": {
+    "test": {
+      "Cholesterol": {
+        "total": 100,
+        "augmented_named": 99
+      },
+      "Control": {
+        "total": 101,
+        "augmented_named": 101
+      },
+      "DM": {
+        "total": 1,
+        "augmented_named": 0
+      },
+      "Heart Disease": {
+        "total": 1,
+        "augmented_named": 0
+      },
+      "Hypertension": {
+        "total": 1,
+        "augmented_named": 0
+      }
+    },
+    "train": {
+      "Cholesterol": {
+        "total": 97,
+        "augmented_named": 96
+      },
+      "Control": {
+        "total": 112,
+        "augmented_named": 112
+      },
+      "DM": {
+        "total": 768,
+        "augmented_named": 744
+      },
+      "Heart Disease": {
+        "total": 830,
+        "augmented_named": 825
+      },
+      "Hypertension": {
+        "total": 799,
+        "augmented_named": 789
+      }
+    },
+    "val": {
+      "Cholesterol": {
+        "total": 98,
+        "augmented_named": 96
+      },
+      "Control": {
+        "total": 100,
+        "augmented_named": 99
+      },
+      "DM": {
+        "total": 96,
+        "augmented_named": 94
+      },
+      "Heart Disease": {
+        "total": 103,
+        "augmented_named": 102
+      },
+      "Hypertension": {
+        "total": 99,
+        "augmented_named": 97
+      }
+    }
+  },
+  "cross_split": [
+    {
+      "sha256": "436bd8de648f32ee1dcbabe5f02688d811fd89c16e387cdb663df8c8ddd7b194",
+      "paths": [
+        "dataset/train/DM/8.jpg",
+        "dataset/val/Hypertension/8.jpg"
+      ]
+    },
+    {
+      "sha256": "56629ee3d212cc84ede7459237759701b902d31f84bcdcab7434901bd6d3f43d",
+      "paths": [
+        "dataset/test/Hypertension/9.jpg",
+        "dataset/train/Hypertension/9.jpg"
+      ]
+    },
+    {
+      "sha256": "569def0b23494fb45e97d8368d33f08227d14a67b93eda2b58e5a3d1c01c1501",
+      "paths": [
+        "dataset/train/DM/5.jpg",
+        "dataset/val/Cholesterol/2.jpg"
+      ]
+    },
+    {
+      "sha256": "6177c3fdd08aefc0bf7c6fc9a8259b045b7161444cc55234106aefc10c9f31ef",
+      "paths": [
+        "dataset/test/Heart Disease/2.jpg",
+        "dataset/train/DM/9.jpg",
+        "dataset/train/Heart Disease/2.jpg"
+      ]
+    },
+    {
+      "sha256": "b1f5775ac04ab5e5e2056ab59e7f78caf39859827c25ed0882f92ad54c6ebb43",
+      "paths": [
+        "dataset/train/Heart Disease/5.jpg",
+        "dataset/val/DM/12.jpg"
+      ]
+    }
+  ],
+  "cross_label": [
+    {
+      "sha256": "1eccb5d9f67a160d92c5f616f3bad1d12e152bb62483f5326539e3b8606fb425",
+      "paths": [
+        "dataset/train/DM/19.jpg",
+        "dataset/train/Hypertension/21.jpg"
+      ]
+    },
+    {
+      "sha256": "436bd8de648f32ee1dcbabe5f02688d811fd89c16e387cdb663df8c8ddd7b194",
+      "paths": [
+        "dataset/train/DM/8.jpg",
+        "dataset/val/Hypertension/8.jpg"
+      ]
+    },
+    {
+      "sha256": "569def0b23494fb45e97d8368d33f08227d14a67b93eda2b58e5a3d1c01c1501",
+      "paths": [
+        "dataset/train/DM/5.jpg",
+        "dataset/val/Cholesterol/2.jpg"
+      ]
+    },
+    {
+      "sha256": "6177c3fdd08aefc0bf7c6fc9a8259b045b7161444cc55234106aefc10c9f31ef",
+      "paths": [
+        "dataset/test/Heart Disease/2.jpg",
+        "dataset/train/DM/9.jpg",
+        "dataset/train/Heart Disease/2.jpg"
+      ]
+    },
+    {
+      "sha256": "6c58ab824ce70483cd6b595e765b0f159ee9bf10e6d93ea8df9938a97491e71c",
+      "paths": [
+        "dataset/train/DM/10.jpg",
+        "dataset/train/Heart Disease/3.jpg"
+      ]
+    },
+    {
+      "sha256": "7d8cfa0a2b2c4e3d2bca9a8d73f540920bc8693d5bd9055afb02b0ccde7de849",
+      "paths": [
+        "dataset/train/DM/7.jpg",
+        "dataset/train/Hypertension/7.jpg"
+      ]
+    },
+    {
+      "sha256": "b1f5775ac04ab5e5e2056ab59e7f78caf39859827c25ed0882f92ad54c6ebb43",
+      "paths": [
+        "dataset/train/Heart Disease/5.jpg",
+        "dataset/val/DM/12.jpg"
+      ]
+    },
+    {
+      "sha256": "c17e96d51f1ca2fbcdd9026015f1351bbbb3e6fd60e4463613903a1a543050b3",
+      "paths": [
+        "dataset/train/DM/25.jpg",
+        "dataset/train/Heart Disease/6.jpg"
+      ]
+    },
+    {
+      "sha256": "c97d0184f7fe2bc3418454529e6079c6c879fb4664808afcb13fef1ff20eeea6",
+      "paths": [
+        "dataset/val/Cholesterol/12.jpg",
+        "dataset/val/DM/20.jpg",
+        "dataset/val/Hypertension/22.jpg"
+      ]
+    },
+    {
+      "sha256": "d23f01d3fd58d4b37af3e8e94f459e44e3b74dc6b0086ee9ae1f5a6b0fedfa70",
+      "paths": [
+        "dataset/train/DM/22.jpg",
+        "dataset/train/Hypertension/24.jpg"
+      ]
+    },
+    {
+      "sha256": "ef81eecaae63c5d3ed4ad327881e161c87a840ddc9e73b6b1d245323b29ebd7f",
+      "paths": [
+        "dataset/train/DM/21.jpg",
+        "dataset/train/Hypertension/23.jpg"
+      ]
+    }
+  ],
+  "within_split_dupes": []
+}
