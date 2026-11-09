@@ -1,0 +1,26 @@
+# Primary experiment. Multi-label because 11 of the 38 source images carry more than one
+# disease label (comorbidity); a multi-class softmax would force a false choice.
+name: multilabel_efficientnet
+seed: 42
+data:
+  manifest: data/manifest_split.csv
+  task: multilabel
+  classes: [DM, Hypertension, Heart Disease, Cholesterol]
+  negative_label: Control
+  img_size: 224
+  enhance: true
+model:
+  arch: efficientnet_b0
+  pretrained: true
+  dropout: 0.3
+  fine_tune_layers: 20
+train:
+  epochs: 30
+  fine_tune_epochs: 10
+  batch_size: 8
+  lr: 1.0e-3
+  fine_tune_lr: 1.0e-5
+  early_stopping_patience: 8
+  threshold: 0.5
+augment:
+  enabled: true
