@@ -52,7 +52,6 @@ from keras.layers import Activation
 from keras.layers import Concatenate
 from keras.initializers import RandomNormal
 import tqdm
-from numba import jit, cuda
 from numpy import expand_dims
 from numpy import zeros
 from numpy import ones
@@ -296,7 +295,12 @@ import numpy as np
 #
 #
 #
-def define_discriminator(in_shape=(64, 64, 3), n_classes=2):
+# Number of classes is taken from the loaded labels so the generator, the discriminator's
+# auxiliary classifier and the sampled fake labels always agree.
+N_CLASSES = int(labels.max()) + 1
+
+
+def define_discriminator(in_shape=(64, 64, 3), n_classes=N_CLASSES):
     # Weight initialization
     init = RandomNormal(stddev=0.02)
     
@@ -347,7 +351,7 @@ def define_discriminator(in_shape=(64, 64, 3), n_classes=2):
     
     return model
 
-def define_generator(latent_dim, n_classes=2):
+def define_generator(latent_dim, n_classes=N_CLASSES):
     # Weight initialization
     init = RandomNormal(stddev=0.02)
     
@@ -532,7 +536,7 @@ def define_gan(g_model, d_model):
     # Define gan model as taking noise and label and outputting real/fake and label outputs
     model = Model(g_model.input, gan_output)
      #Compile model
-    opt = Adam(lr=0.0001,beta_1=0.5)
+    opt = Adam(learning_rate=0.0001, beta_1=0.5)
     model.compile(loss=['binary_crossentropy', 'sparse_categorical_crossentropy'], optimizer=opt)
     return model
 
@@ -541,7 +545,6 @@ def load_real_samples(trainX, trainy):
   #   Load dataset
     #(trainX, trainy), (_, _) = load_data()
    #  Expand to 3D, e.g., add channels
-    X = expand_dims(trainX, axis=-1)
     # Convert from ints to floats
     X = trainX.astype('float32')
      #Scale from [0,255] to [-1,1]
@@ -562,7 +565,7 @@ def generate_real_samples(dataset, n_samples):
     return [X, labels], y
 
  #Generate points in latent space as input for the generator
-def generate_latent_points(latent_dim, n_samples, n_classes=2):
+def generate_latent_points(latent_dim, n_samples, n_classes=N_CLASSES):
   #   Generate points in the latent space
     x_input = randn(latent_dim * n_samples)
    #  Reshape into a batch of inputs for the network
@@ -572,9 +575,9 @@ def generate_latent_points(latent_dim, n_samples, n_classes=2):
     return [z_input, labels]
 
  #Use the generator to generate n fake examples, with class labels
-def generate_fake_samples(generator, latent_dim, n_samples):
+def generate_fake_samples(generator, latent_dim, n_samples, n_classes=N_CLASSES):
   #   Generate points in latent space
-    z_input, labels_input = generate_latent_points(latent_dim, n_samples)
+    z_input, labels_input = generate_latent_points(latent_dim, n_samples, n_classes)
    #  Predict outputs
     images = generator.predict([z_input, labels_input])
     # Create class labels
