@@ -7,28 +7,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import cv2
+
+from src.preprocessing import enhance_image
 from sklearn.metrics import classification_report, roc_auc_score
 
 # 1. Define Dataset Paths and Parameters
-train_data_dir = r"C:\Users\Vansh\OneDrive\Desktop\AC-GAN-Retinal-Disease\dataset\train" 
-validation_data_dir = r"C:\Users\Vansh\OneDrive\Desktop\AC-GAN-Retinal-Disease\dataset\val" 
-
+DATA_DIR = os.environ.get("RETINA_DATA_DIR", "dataset")
+train_data_dir = os.path.join(DATA_DIR, "train")
+validation_data_dir = os.path.join(DATA_DIR, "val")
 img_height, img_width = 128, 128
 batch_size = 32
 target_classes = ['Hypertension', 'Heart Disease']  
-num_classes = 2  
+num_classes = len(target_classes)
 seed = 42
 
-# Function for histogram equalization
-def enhance_image(img):
-    img_yuv = cv2.cvtColor(img, cv2.COLOR_RGB2YUV)
-    y_channel = img_yuv[:,:,0]
-    if y_channel.dtype != np.uint8:
-        y_channel = (y_channel * 255).astype(np.uint8)
-    equalized_y = cv2.equalizeHist(y_channel)
-    img_yuv[:,:,0] = equalized_y
-    img_output = cv2.cvtColor(img_yuv, cv2.COLOR_YUV2RGB)
-    return img_output
+# Histogram equalization (shared, fixed implementation; see src/preprocessing.py)
 
 # Custom data generator with image enhancement
 class EnhancedImageDataGenerator(ImageDataGenerator):
