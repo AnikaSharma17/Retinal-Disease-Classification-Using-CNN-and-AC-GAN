@@ -1,0 +1,7 @@
+# Does on-the-fly augmentation help? (3 seeds each)
+base: configs/multilabel_efficientnet.yaml
+seeds: [1, 2, 3]
+variants:
+  no_augmentation: ["augment.enabled=false"]
+  classic_augmentation: []
+  no_histogram_equalization: ["data.enhance=false"]
