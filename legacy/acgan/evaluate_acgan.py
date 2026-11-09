@@ -160,7 +160,6 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 import tqdm
-from numba import jit, cuda
 from numpy import expand_dims
 from tensorflow.keras.utils import plot_model
 from numpy import zeros
@@ -286,21 +285,21 @@ filenames=[]
 #    labels1.append(9)
 for i in normal[0:500]:   
     image=tf.keras.preprocessing.image.load_img(i, color_mode='rgb', 
-    target_size= (128,128))
+    target_size= (64,64))  # must match the discriminator input in train_acgan.py
     image=np.array(image)
     data.append(image)
     labels.append(0)
     filenames.append(i)
 for i in glaucoma[0:500]:   
     image=tf.keras.preprocessing.image.load_img(i, color_mode='rgb', 
-    target_size= (128,128))
+    target_size= (64,64))  # must match the discriminator input in train_acgan.py
     image=np.array(image)
     data.append(image)
     labels.append(1)
     filenames.append(i)
 for i in DR[0:500]:   
     image=tf.keras.preprocessing.image.load_img(i, color_mode='rgb', 
-    target_size= (128,128))
+    target_size= (64,64))  # must match the discriminator input in train_acgan.py
     image=np.array(image)
     data.append(image)
     labels.append(2)
@@ -371,8 +370,7 @@ model = load_model('discriminator_0183.h5')
  #load the dataset
 
 #expand to 3d, e.g. add channels
-trainX = expand_dims(trainX, axis=-1)
-testX = expand_dims(testX, axis=-1)
+# Images are already HxWx3; adding a channel axis here produced 5-D input the model rejects.
  #convert from ints to floats
 trainX = trainX.astype('float32')
 testX = testX.astype('float32')
