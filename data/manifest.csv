@@ -1,0 +1,39 @@
+group_id,sha256,path,all_paths,labels,n_labels,source_splits
+g00000,06dd88b3d4f7a980b140250c5e3c5a382d436bfd55b4e1367b66faf140925ed4,dataset/train/DM/32.jpg,dataset/train/DM/32.jpg,DM,1,train
+g00001,0aa5b65ae1d39f5099d0ab3dc704a288a15b83d7880eac7e1573e9d438f14d67,dataset/train/DM/23.jpg,dataset/train/DM/23.jpg,DM,1,train
+g00002,1eccb5d9f67a160d92c5f616f3bad1d12e152bb62483f5326539e3b8606fb425,dataset/train/DM/19.jpg,dataset/train/DM/19.jpg;dataset/train/Hypertension/21.jpg,DM;Hypertension,2,train
+g00003,210fa713de1811708feea7f07cde72d30a14d361790e293afd243b59b0281c93,dataset/train/DM/2.jpg,dataset/train/DM/2.jpg,DM,1,train
+g00004,25f269ccfa769c72998a15a42a391efe8aaa8b008c907c3db0dd32d34e3419a3,dataset/train/DM/31.jpg,dataset/train/DM/31.jpg,DM,1,train
+g00005,3db327b2ffe1dd2fa3b7c5e7b65802472188927e5dd48f6b79f4f63acfa96c95,dataset/train/Heart Disease/1.jpg,dataset/train/Heart Disease/1.jpg,Heart Disease,1,train
+g00006,436bd8de648f32ee1dcbabe5f02688d811fd89c16e387cdb663df8c8ddd7b194,dataset/train/DM/8.jpg,dataset/train/DM/8.jpg;dataset/val/Hypertension/8.jpg,DM;Hypertension,2,train;val
+g00007,56629ee3d212cc84ede7459237759701b902d31f84bcdcab7434901bd6d3f43d,dataset/test/Hypertension/9.jpg,dataset/test/Hypertension/9.jpg;dataset/train/Hypertension/9.jpg,Hypertension,1,test;train
+g00008,569def0b23494fb45e97d8368d33f08227d14a67b93eda2b58e5a3d1c01c1501,dataset/train/DM/5.jpg,dataset/train/DM/5.jpg;dataset/val/Cholesterol/2.jpg,Cholesterol;DM,2,train;val
+g00009,585c59b827adab516e9a1f0c5f11d7d0c32b649ad61a92d3be1150080d9d8ae7,dataset/train/DM/24.jpg,dataset/train/DM/24.jpg,DM,1,train
+g00010,6177c3fdd08aefc0bf7c6fc9a8259b045b7161444cc55234106aefc10c9f31ef,dataset/test/Heart Disease/2.jpg,dataset/test/Heart Disease/2.jpg;dataset/train/DM/9.jpg;dataset/train/Heart Disease/2.jpg,DM;Heart Disease,2,test;train
+g00011,6276223751a57978c88c5cf4ed2516d562a50dabf7e2e732c7b4df7eb668cd74,dataset/train/Hypertension/14.jpg,dataset/train/Hypertension/14.jpg,Hypertension,1,train
+g00012,6c58ab824ce70483cd6b595e765b0f159ee9bf10e6d93ea8df9938a97491e71c,dataset/train/DM/10.jpg,dataset/train/DM/10.jpg;dataset/train/Heart Disease/3.jpg,DM;Heart Disease,2,train
+g00013,6ca1e896590324527c8be0e8ada64516de96cecbd2fe37fcf4e3aa4bca585072,dataset/train/Hypertension/19.jpg,dataset/train/Hypertension/19.jpg,Hypertension,1,train
+g00014,6ecb75ea93900c9dc525b8e5ffea6fc60ee3f47767d1f7640d1610a04fb6639b,dataset/train/DM/36.jpg,dataset/train/DM/36.jpg,DM,1,train
+g00015,706857a611a82ce46c49afd3083ea43044dfeab19d273a4057b7a3922a633dcc,dataset/train/DM/17.jpg,dataset/train/DM/17.jpg,DM,1,train
+g00016,790b0b66e6ae3d8aa16690118788e1e0f9d8d375d84dd01aed1f52d6b1f08112,dataset/train/DM/26.jpg,dataset/train/DM/26.jpg,DM,1,train
+g00017,7d8cfa0a2b2c4e3d2bca9a8d73f540920bc8693d5bd9055afb02b0ccde7de849,dataset/train/DM/7.jpg,dataset/train/DM/7.jpg;dataset/train/Hypertension/7.jpg,DM;Hypertension,2,train
+g00018,7dbe26fda0b3a55e44db24634113bfcd1e48490e60b753773548cf541be79265,dataset/train/Hypertension/38.jpg,dataset/train/Hypertension/38.jpg,Hypertension,1,train
+g00019,96fab7dc971bfc44b02f0a1697fd5efd74733b811989029b039a9d80d6b6cbe7,dataset/val/Control/40.jpg,dataset/val/Control/40.jpg,Control,1,val
+g00020,9b8dbee9775b035903b5528bcf93c112e1c16e1b775ef17d8a08e213341b7d85,dataset/train/DM/30.jpg,dataset/train/DM/30.jpg,DM,1,train
+g00021,9e23da38bb3adc8ce88e056dbceff8109f3f364d4b7476008d1a91352bd8d894,dataset/train/Hypertension/6.jpg,dataset/train/Hypertension/6.jpg,Hypertension,1,train
+g00022,a018d41837693e5f6379a92ad22899a112208c41a95c8b6fd0a7c93085929189,dataset/test/Cholesterol/15.jpg,dataset/test/Cholesterol/15.jpg,Cholesterol,1,test
+g00023,a2673b1d6a74357cc47bc07ab810e57c500775af715d862f8a25514ab21d95d2,dataset/train/Cholesterol/8.jpg,dataset/train/Cholesterol/8.jpg,Cholesterol,1,train
+g00024,a2b19452901ca7b3bcfcb5617680fa4814a94c2de0029987470ec52134e4ccc7,dataset/val/Heart Disease/4.jpg,dataset/val/Heart Disease/4.jpg,Heart Disease,1,val
+g00025,a6a1487c0c2d32ecd1e5d453771605fa937128e1f1945f0fd86b7acd79499592,dataset/train/DM/29.jpg,dataset/train/DM/29.jpg,DM,1,train
+g00026,b1f5775ac04ab5e5e2056ab59e7f78caf39859827c25ed0882f92ad54c6ebb43,dataset/train/Heart Disease/5.jpg,dataset/train/Heart Disease/5.jpg;dataset/val/DM/12.jpg,DM;Heart Disease,2,train;val
+g00027,bc3fdad53db376fbbacc54526c0dd1470819e73c70528745246e2faed783dfc4,dataset/train/DM/34.jpg,dataset/train/DM/34.jpg,DM,1,train
+g00028,c17e96d51f1ca2fbcdd9026015f1351bbbb3e6fd60e4463613903a1a543050b3,dataset/train/DM/25.jpg,dataset/train/DM/25.jpg;dataset/train/Heart Disease/6.jpg,DM;Heart Disease,2,train
+g00029,c7a85c15356f898b2d5e01999f9151250cd5addca9290abb517257396636b12f,dataset/test/DM/15.jpg,dataset/test/DM/15.jpg,DM,1,test
+g00030,c7d104255b43273240fe0727ae4b936ead00e80c7b5e565b36111ce56392d6ee,dataset/train/DM/37.jpg,dataset/train/DM/37.jpg,DM,1,train
+g00031,c925663509ea8d7f5ead7060acb94e6de18ca7133ff2ddeb23ef5fd4489f475e,dataset/train/DM/3.jpg,dataset/train/DM/3.jpg,DM,1,train
+g00032,c97d0184f7fe2bc3418454529e6079c6c879fb4664808afcb13fef1ff20eeea6,dataset/val/Cholesterol/12.jpg,dataset/val/Cholesterol/12.jpg;dataset/val/DM/20.jpg;dataset/val/Hypertension/22.jpg,Cholesterol;DM;Hypertension,3,val
+g00033,cb258f9aa24fcc05c4910498c7bd3b86319f58042cba1faf9732d8870808c41f,dataset/train/DM/27.jpg,dataset/train/DM/27.jpg,DM,1,train
+g00034,d23f01d3fd58d4b37af3e8e94f459e44e3b74dc6b0086ee9ae1f5a6b0fedfa70,dataset/train/DM/22.jpg,dataset/train/DM/22.jpg;dataset/train/Hypertension/24.jpg,DM;Hypertension,2,train
+g00035,d9a10e731eddafddd7d2b184b4fbffb16a789a9f8830e027a28c72d43ca526fd,dataset/train/DM/28.jpg,dataset/train/DM/28.jpg,DM,1,train
+g00036,e78fd56f8d080557a60252e2cc70862f0e89f536f0454c0401fa4879a70d9c58,dataset/train/Hypertension/37.jpg,dataset/train/Hypertension/37.jpg,Hypertension,1,train
+g00037,ef81eecaae63c5d3ed4ad327881e161c87a840ddc9e73b6b1d245323b29ebd7f,dataset/train/DM/21.jpg,dataset/train/DM/21.jpg;dataset/train/Hypertension/23.jpg,DM;Hypertension,2,train

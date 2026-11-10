@@ -1,0 +1,44 @@
+files: 3306   unique (sha256): 3292   offline-augmented by name: 98.4%
+
+split   label             total  aug-named  originals
+test    Cholesterol         100         99          1
+test    Control             101        101          0
+test    DM                    1          0          1
+test    Heart Disease         1          0          1
+test    Hypertension          1          0          1
+train   Cholesterol          97         96          1
+train   Control             112        112          0
+train   DM                  768        744         24
+train   Heart Disease       830        825          5
+train   Hypertension        799        789         10
+val     Cholesterol          98         96          2
+val     Control             100         99          1
+val     DM                   96         94          2
+val     Heart Disease       103        102          1
+val     Hypertension         99         97          2
+
+IDENTICAL IMAGE IN MORE THAN ONE SPLIT (leakage): 5
+  436bd8de648f  dataset/train/DM/8.jpg | dataset/val/Hypertension/8.jpg
+  56629ee3d212  dataset/test/Hypertension/9.jpg | dataset/train/Hypertension/9.jpg
+  569def0b2349  dataset/train/DM/5.jpg | dataset/val/Cholesterol/2.jpg
+  6177c3fdd08a  dataset/test/Heart Disease/2.jpg | dataset/train/DM/9.jpg | dataset/train/Heart Disease/2.jpg
+  b1f5775ac04a  dataset/train/Heart Disease/5.jpg | dataset/val/DM/12.jpg
+
+IDENTICAL IMAGE UNDER MORE THAN ONE LABEL: 11
+  1eccb5d9f67a  dataset/train/DM/19.jpg | dataset/train/Hypertension/21.jpg
+  436bd8de648f  dataset/train/DM/8.jpg | dataset/val/Hypertension/8.jpg
+  569def0b2349  dataset/train/DM/5.jpg | dataset/val/Cholesterol/2.jpg
+  6177c3fdd08a  dataset/test/Heart Disease/2.jpg | dataset/train/DM/9.jpg | dataset/train/Heart Disease/2.jpg
+  6c58ab824ce7  dataset/train/DM/10.jpg | dataset/train/Heart Disease/3.jpg
+  7d8cfa0a2b2c  dataset/train/DM/7.jpg | dataset/train/Hypertension/7.jpg
+  b1f5775ac04a  dataset/train/Heart Disease/5.jpg | dataset/val/DM/12.jpg
+  c17e96d51f1c  dataset/train/DM/25.jpg | dataset/train/Heart Disease/6.jpg
+  c97d0184f7fe  dataset/val/Cholesterol/12.jpg | dataset/val/DM/20.jpg | dataset/val/Hypertension/22.jpg
+  d23f01d3fd58  dataset/train/DM/22.jpg | dataset/train/Hypertension/24.jpg
+  ef81eecaae63  dataset/train/DM/21.jpg | dataset/train/Hypertension/23.jpg
+
+duplicate within one split/label: 0
+
+WARNING: offline-augmented files present. Augmented copies of one source image cannot be
+traced back to it, so splitting a tree that contains them leaks near-duplicates across
+splits. Split the originals (src.data.manifest) and augment the training split on the fly.
